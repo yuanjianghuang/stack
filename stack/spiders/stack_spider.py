@@ -1,6 +1,6 @@
 from scrapy import Spider
 from scrapy.selector import Selector
- 
+
 from stack.items import StackItem
  
  
@@ -10,7 +10,7 @@ class StackSpider(Spider):
     start_urls = [
         "http://stackoverflow.com/questions?sort=frequent",
     ]
- 
+
     def parse(self, response):
         questions = Selector(response).xpath('//div[@class="summary"]/h3')
  

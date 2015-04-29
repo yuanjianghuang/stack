@@ -24,3 +24,6 @@ Note:
    it will show all database in use
    then, "use db", choose available database
    then, "db.collectionName.find().limit(10)" show the first 10 items in the database.
+
+5, Python下用Scrapy和MongoDB构建爬虫系统（2） http://python.jobbole.com/81280/
+   won't work

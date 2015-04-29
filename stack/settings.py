@@ -21,3 +21,6 @@ MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
 MONGODB_DB = "stackoverflow"
 MONGODB_COLLECTION = "questions"
+
+# download delay
+DOWNLOAD_DELAY = 5
