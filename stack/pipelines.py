@@ -6,7 +6,7 @@
 # See: http://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-import pymongo
+from pymongo import MongoClient
 from scrapy.conf import settings
 from scrapy.exceptions import DropItem
 from scrapy import log
@@ -14,13 +14,17 @@ from scrapy import log
 
 class MongoDBPipeline(object):
 
+    '''
+        http://api.mongodb.org/python/current/tutorial.html
+        How to manage pymongo database
+    '''
     def __init__(self):
-        connection = pymongo.Connection(
+        connection = MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db[settings['MONGODB_COLLECTION']]
+        db = connection[settings['MONGODB_DB']] # Getting a databse
+        self.collection = db[settings['MONGODB_COLLECTION']]  # Getting a collection
 
     def process_item(self, item, spider):
         valid = True
