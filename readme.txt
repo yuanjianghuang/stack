@@ -14,3 +14,13 @@ Note:
 
     go to the folder where MongoDB installed, and go to the bin folder, execute:
     mongo
+
+4, go to the bin folder where Mongo installed
+   execute mongo, the shell will start to connect to the server,
+
+   http://docs.mongodb.org/manual/reference/mongo-shell/ for more command,
+
+   then,  show dbs
+   it will show all database in use
+   then, "use db", choose available database
+   then, "db.collectionName.find().limit(10)" show the first 10 items in the database.
